@@ -17,6 +17,6 @@ I wanted something to indicate when you can grab an object and when you are grab
 You can clone the repo or [download the unitypackage](https://github.com/Thomas-6freedom/UnityVRGrabberExample/releases/latest)
 
 # How to Use it ?
-You simply have to use the Left Hand and the Right Hand prefab. Then you have a Grabbable prefab. There is a test scene nammed "SampleScene".
+You simply have to use the Left Hand and the Right Hand prefab. Then you have a Grabbable prefab. There is a test scene named "VRHandExampleScene".
 
 ![](https://thumbs.gfycat.com/PolishedNiceBluebottle-size_restricted.gif)
