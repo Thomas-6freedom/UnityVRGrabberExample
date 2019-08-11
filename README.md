@@ -13,6 +13,9 @@ Use the package "XR Legacy Input Helpers" because at the time this example was c
 I wanted to have VR animated hands to grab objects in Unity **without using the Oculus SDK or any other SDK**
 I wanted something to indicate when you can grab an object and when you are grabbing it.
 
+# Download
+You can clone the repo or [download the unitypackage](https://github.com/Thomas-6freedom/UnityVRGrabberExample/releases/latest)
+
 # How to Use it ?
 You simply have to use the Left Hand and the Right Hand prefab. Then you have a Grabbable prefab. There is a test scene nammed "SampleScene".
 
