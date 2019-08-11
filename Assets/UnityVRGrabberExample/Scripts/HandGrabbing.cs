@@ -49,7 +49,7 @@ public class HandGrabbing : MonoBehaviour
             {
                 _isGrabbing = true;
 
-                //Remember old parent of the object unless it is on the other hand
+                //Remember old parent of the object unless it is in other hand
                 if(OtherHandReference.currentGrabObject != nearestGrabbable)
                     _oldGrabbedObjectParent = nearestGrabbable.transform.parent;
 
@@ -68,9 +68,10 @@ public class HandGrabbing : MonoBehaviour
 
                 //save a reference to grab object
                 currentGrabObject = nearestGrabbable;
+                nearestGrabbable = null;
 
-                //does other hand currently grab object? then release it!
-                if (OtherHandReference.currentGrabObject != null)
+                //does other hand currently grab the same object? then release it!
+                if (OtherHandReference.currentGrabObject == currentGrabObject)
                 {
                     OtherHandReference.currentGrabObject = null;
                 }
@@ -101,7 +102,6 @@ public class HandGrabbing : MonoBehaviour
                 currentGrabObject = null;
                 _oldGrabbedObjectParent = null;
             }
-
         }
 
         //release grab ?
@@ -123,6 +123,9 @@ public class HandGrabbing : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (_isGrabbing)
+            return;
+
         if (other.CompareTag("Grabbable"))
         {
             if (nearestGrabbable != null)
@@ -131,13 +134,19 @@ public class HandGrabbing : MonoBehaviour
                 nearestGrabbable = null;
             }
             nearestGrabbable = other.GetComponent<Grabbable>();
-            nearestGrabbable.Select();
             nearestGrabbableCollider = other;
+
+            //always unselect but when you are stil grabbing it with your other hand
+            if (nearestGrabbable != OtherHandReference.currentGrabObject)
+                nearestGrabbable.Select();
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+        if (_isGrabbing || nearestGrabbable == null)
+            return;
+
         if (other.CompareTag("Grabbable") && other == nearestGrabbableCollider)
         {
             //always unselect but when you are stil grabbing it with your other hand
