@@ -17,3 +17,4 @@ I wanted something to indicate when you can grab an object and when you are grab
 You simply have to use the Left Hand and the Right Hand prefab. Then you have a Grabbable prefab. There is a test scene nammed "SampleScene".
 
 https://gfycat.com/polishednicebluebottle
+<iframe src='https://gfycat.com/ifr/PolishedNiceBluebottle' frameborder='0' scrolling='no' allowfullscreen width='640' height='459'></iframe>
