@@ -15,3 +15,5 @@ I wanted something to indicate when you can grab an object and when you are grab
 
 # How to Use it ?
 You simply have to use the Left Hand and the Right Hand prefab. Then you have a Grabbable prefab. There is a test scene nammed "SampleScene".
+
+https://gfycat.com/polishednicebluebottle
