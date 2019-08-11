@@ -4,7 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Grab
+  - Grabbable
   layers:
   - Default
   - TransparentFX
@@ -14,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Grabbable
   - 
   - 
   - 
@@ -41,4 +41,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: First
+    uniqueID: 3404630301
     locked: 0
