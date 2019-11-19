@@ -23,9 +23,8 @@ You simply have to use the Left Hand and the Right Hand prefab. Then you have a 
 
 
 #Troubleshoot
-If you have only one hand usable at one time. Add this line to your manifest: 
+If you have only one hand usable at one time. Add this line to your [manifest](https://developer.oculus.com/documentation/quest/latest/concepts/mobile-native-manifest/): 
 `<uses-feature android:name="android.hardware.vr.headtracking" android:required="true" android:version="1"/>`
 
-(source)[https://developer.oculus.com/documentation/quest/latest/concepts/mobile-native-manifest/]
 
 If you have a Physics2D compiler error; remove Unity UI in your package manager
