@@ -20,3 +20,10 @@ You can clone the repo or [download the unitypackage](https://github.com/Thomas-
 You simply have to use the Left Hand and the Right Hand prefab. Then you have a Grabbable prefab. There is a test scene named "VRHandExampleScene".
 
 ![](https://thumbs.gfycat.com/PolishedNiceBluebottle-size_restricted.gif)
+
+
+#Troubleshoot
+If you have only one hand usable at one time. Add this line to your manifest: 
+`<uses-feature android:name="android.hardware.vr.headtracking" android:required="true" android:version="1"/>`
+
+If you have a Physics2D compiler error; remove Unity UI in your package manager
